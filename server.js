@@ -2,9 +2,15 @@
 const express = require('express');
 const budget = require("./models/budget");
 
+
+
+
 //////////////////////////////////// INITIALIZE EXPRESS APP ////////////////////////////////////
 const app = express();
 const port = 3000;
+
+/// MIDDLEWARE
+app.use(express.urlencoded({extended: false}));
 
 //////////////////////////////////// DEFINE OUR ROUTES  ////////////////////////////////////
 // INDUCES
@@ -29,8 +35,8 @@ app.get("/budgets/new", (req, res) => {
 
 //////////////////////////////////// CREATE ////////////////////////////////////
 app.post("/budgets", (req, res) => {
-    console.log("Create route accessed!")
-    res.send("This route works")
+  budget.push(req.body),
+  res.redirect("/budgets")
 });
 
 ////////////////////////////////////EDIT ////////////////////////////////////

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
     <title>Budget Index</title>
 </head>
+<body>
 <h1>Budget index page</h1>
 
 <div class = "container">
@@ -23,15 +24,16 @@
       <% for(let i = 0; i < allBudget.length; i++) { %>
     
         <tr>
-        <td><%=allBudget[i].name %></td>
+        <td><%=allBudget[i].date %></td>
         <td><a href="/budgets/<%=i%>"><%=allBudget[i].name %></a></td>
-        <td><%=allBudget[i].name %></td>
-        <td>$<%=allBudget[i].name %></td>
-        <td><%=allBudget[i].name %></td>
+        <td><%=allBudget[i].from %></td>
+        <td>$<%=allBudget[i].amount %></td>
+        <td><%=allBudget[i].tags %></td>
       <% } %>
     </tr>
     </table>
     <button><a href="/budgets/new">Add More</a> </button>
    
   </div>
+</body>
 </html>
