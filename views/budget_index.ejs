@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
     <title>Budget Index</title>
 </head>
 <h1>Budget index page</h1>
     <ul>
       <% for(let i = 0; i < allBudget.length; i++) { %>
       <li>
-        <a href="/budget/<%=i%>"><%=allBudget[i].name %></a>
+        <a href="/budgets/<%=i%>"><%=allBudget[i].name %></a>
       </li>
       <% } %>
     </ul>
