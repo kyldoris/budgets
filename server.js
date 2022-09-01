@@ -24,7 +24,8 @@ app.get("/budgets/:index", (req, res) => {
 });
 
 app.get("/budgets/new", (req, res)=>{
-    res.render("budget_new.ejs")
+    res.render("budget_new.ejs"
+    )
 });
 
 app.post("/budgets", (req, res) => {

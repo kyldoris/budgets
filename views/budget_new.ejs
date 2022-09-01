@@ -7,6 +7,19 @@
     <title>Budget New</title>
 </head>
 <body>
+    <div class = "container">
+        <h1>Add New Budget Information</h1>
 
+        <form action="/budgets" method="POST">
+      
+                Date: <input type="text" name="date" placeholder="Enter the Date"><br/>
+                Name: <input type="text" name="name" placeholder="Budget Name"><br/>
+                Amount: <input type="text" name="amount" placeholder="Total Amount"><br/>
+                From: <input type="text" name="from" placeholder="From"><br/>
+                Tags: <input type="text" name="tags" placeholder="Seperate tag by ,"><br/>
+                <input type="submit" value="Add To Budget">
+                
+            </form>
+    </div>
 </body>
 </html>
