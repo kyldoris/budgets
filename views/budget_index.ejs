@@ -7,11 +7,31 @@
     <title>Budget Index</title>
 </head>
 <h1>Budget index page</h1>
-    <ul>
+
+<div class = "container">
+  <h1>Budgets ALL</h1>
+
+
+
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Budget Name</th>
+        <th>From</th>
+        <th>Amount $</th>
+        <th>Tags</th>
+        </tr>
       <% for(let i = 0; i < allBudget.length; i++) { %>
-      <li>
-        <a href="/budgets/<%=i%>"><%=allBudget[i].name %></a>
-      </li>
+     
+        <tr>
+        <td><%=allBudget[i].date %></td>
+        <td><a href="/budgets/<%=i%>"><%=allBudget[i].name %></a></td>
+        <td><%=allBudget[i].from %></td>
+        <td>$<%=allBudget[i].amount %></td>
+        <td><%=allBudget[i].tags %></td>
       <% } %>
-    </ul>
+    </tr>
+    </table>
+    <button href="/budgets">Back</button>
+  </div>
 </html>
