@@ -7,6 +7,28 @@
     <title>Budget Show</title>
 </head>
 <body>
-   
+    <h1>Budget Details</h1>
+    <div class = "container">
+    <table>
+        <tr>
+          <th>Date</th>
+          <th>Budget Name</th>
+          <th>From</th>
+          <th>Amount $</th>
+          <th>Tags</th>
+          </tr>
+        
+        <tr>
+          <td><%=budgets.name %></td>
+          <td><%=budgets.date %></td>
+          <td><%=budgets.from %></td>
+          <td>$<%=budgets.amount %></td>
+          <td><%=budgets.tags %></td>
+ 
+      </tr>
+      </table>
+      <button><a href="/budgets/">All Budgets</a> </button>
+    </div>
+ 
 </body>
 </html>

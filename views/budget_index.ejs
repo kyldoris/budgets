@@ -11,8 +11,6 @@
 <div class = "container">
   <h1>Budgets ALL</h1>
 
-
-
     <table>
       <tr>
         <th>Date</th>
@@ -21,17 +19,18 @@
         <th>Amount $</th>
         <th>Tags</th>
         </tr>
+
       <% for(let i = 0; i < allBudget.length; i++) { %>
-     
+    
         <tr>
-        <td><%=allBudget[i].date %></td>
+        <td><%=allBudget[i].name %></td>
         <td><a href="/budgets/<%=i%>"><%=allBudget[i].name %></a></td>
-        <td><%=allBudget[i].from %></td>
-        <td>$<%=allBudget[i].amount %></td>
-        <td><%=allBudget[i].tags %></td>
+        <td><%=allBudget[i].name %></td>
+        <td>$<%=allBudget[i].name %></td>
+        <td><%=allBudget[i].name %></td>
       <% } %>
     </tr>
     </table>
-    <button href="/budgets">Back</button>
+   <button href="/budgets/new">Add More</button>
   </div>
 </html>
