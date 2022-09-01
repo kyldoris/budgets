@@ -14,11 +14,12 @@
 
     <table>
       <tr>
-        <th>Date</th>
+        <th>Date (MM/DD)</th>
         <th>Budget Name</th>
-        <th>From</th>
-        <th>Amount $</th>
+        <th>From (Name/ Organization</th>
+        <th>Amount</th>
         <th>Tags</th>
+        <th>Remove</th>
         </tr>
 
       <% for(let i = 0; i < allBudget.length; i++) { %>
@@ -29,8 +30,10 @@
         <td><%=allBudget[i].from %></td>
         <td>$<%=allBudget[i].amount %></td>
         <td><%=allBudget[i].tags %></td>
-      <% } %>
+        <% } %>
+        <br>
     </tr>
+
     </table>
     <button><a href="/budgets/new">Add More</a> </button>
    
