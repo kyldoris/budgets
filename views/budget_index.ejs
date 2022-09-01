@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Budget Index</title>
+</head>
+<h1>Budget index page</h1>
+    <ul>
+      <% for(let i = 0; i < allBudget.length; i++) { %>
+      <li>
+        <a href="/budget/<%=i%>"><%=allBudget[i].name %></a>
+      </li>
+      <% } %>
+    </ul>
+</html>
